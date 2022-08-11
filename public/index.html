@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Chat</title>
+</head>
+
+<body>
+
+    <!-- * https://laracasts.com/discuss/channels/code-review/how-do-i-populate-chat-message-from-bottom-to-top -->
+
+    <!-- * https://stackoverflow.com/questions/25505778/automatically-scroll-down-chat-div -->
+
+        
+        <div class="container" id="bodydiv">
+
+            <div>
+                <h1>nome: <span id="divMeuNome"></span> </h1>
+            </div>
+            
+            <form class="input-group mt-3" name="user_form_name" id="user_form">
+                <input name="user" id="user" type="text" class="form-control" placeholder="username" aria-label="username" aria-describedby="button-addon2">
+                <button class="btn btn-success text-white btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+            </form>
+
+            <div id="messages">
+            </div>
+            <div class="box">
+                <form class="add-post-form" name="message_form_name" id="message_form">
+                    <input id="inputText" type="text" name="msg" placeholder="digite sua mensagem">
+                    <input id="inputSubmit" type="submit" value="Enviar">
+                    <!-- <button type="submit">Enviar</button> -->
+                </form>
+            </div>
+
+
+        </div>
+
+    
+            
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+</body>
+
+</html>
